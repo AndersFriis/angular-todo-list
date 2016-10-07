@@ -5,17 +5,41 @@ angular.module('app', [])
 
 
 function mainController($scope) {
-    $scope.tasks = [
+    $scope.tasks = [];
+    $scope.newTask = '';
+    $scope.mytext = 'changed'
+
         
-        $scope.newTask =  {
-        addTask: '',
-        
 
-
-
-
-
-$scope.addTask = function () {
-        $scope.contacts.push($scope.newContact);
-        $scope.newContact = {};
+    $scope.addTask = function(msg) {
+        $scope.tasks.push(msg);
+        console.log("calling add task");
+        console.log($scope.tasks);
     }
+
+     
+
+    $scope.removeTask = function(index) {
+        $scope.tasks.splice(index,1);
+    }
+
+
+
+
+
+
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
