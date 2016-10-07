@@ -6,8 +6,11 @@ angular.module('app', [])
 
 function mainController($scope) {
     $scope.tasks = [];
-    $scope.newTask = {msg:"Add Task"};
+    $scope.newTask = {done: false};
     $scope.mytext = 'changed'
+
+    
+
 
 
         
@@ -31,6 +34,9 @@ function mainController($scope) {
     }
 
     //mark task complete
+    $scope.complete = function(task) {
+       task.done = true;  
+    }
 
 
 
