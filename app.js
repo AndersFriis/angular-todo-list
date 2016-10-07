@@ -6,25 +6,31 @@ angular.module('app', [])
 
 function mainController($scope) {
     $scope.tasks = [];
-    $scope.newTask = '';
+    $scope.newTask = {msg:"Add Task"};
     $scope.mytext = 'changed'
 
-        
 
-    $scope.addTask = function(msg) {
-        $scope.tasks.push(msg);
-        console.log("calling add task");
-        console.log($scope.tasks);
+        
+    //add task
+    $scope.addTask = function(task) {
+        $scope.tasks.push(task);
+        //clear input
+        $scope.newTask = {}
+        
     }
 
      
-
+    //remove task
     $scope.removeTask = function(index) {
         $scope.tasks.splice(index,1);
     }
 
+    //edit task
+    $scope.editTask = function(task) {
+        $scope.newTask = task
+    }
 
-
+    //mark task complete
 
 
 
