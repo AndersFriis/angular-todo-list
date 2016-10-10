@@ -1,3 +1,36 @@
 body{
     padding-top: 0px;
+    padding-bottom: 70px;
+}
+
+.page-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    
+    border-top: 1px solid #aaa;
+    padding-top: 10px;
+    background-color: lightblue;
+}
+
+.navbar {
+    background-color: lightblue;
+    font-family: cursive;
+}
+
+.jumbotron {
+    background-color: lightblue;
+}
+
+.task.done {
+    text-decoration: line-through;
+    text-align: center;
+    background-color: black;
+}
+
+.boxed {
+    background-color: lightblue;
+    border-radius: 9px;
+    height: 100px;
+    padding-top: 20px;
 }

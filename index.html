@@ -24,13 +24,14 @@
 <body ng-cloak ng-controller="MainCtrl">
     
     <header>
-        <nav class="navbar navbar-default">
+        <nav class="navbar">
+            <h2>To Do List</h2>
             <div class="container">
-                    <div class="navbar-header">
-                        <div class="navbar-brand"> 
-                        </div>
-                        <h2>To Do List</h2>
-                    </div>
+                <div class="navbar-header">
+                        
+                        
+                        
+                </div>
             </div>
         </nav>
     </header>
@@ -38,45 +39,61 @@
 <div class="container">
     <div class="row">
         <div class="col-md-offset-4 col-md-4">
-            <div class="form-group">
+                <div class="form-group">
+                    <div class="jumbotron">
             <label for="">Add New Task</label>
                 <input type="text" ng-model="newTask.msg"  class="form-control">
             <button ng-click="addTask(newTask)">submit</button>
-                </li>
-            </ul>
-        </div>
+                    
+                    </div>    
+                </div>
+
         
-        
+    
                 
                 
-            </div>
+            
               
     </div>    
     <div class="row">
         <div class= "col-md-offset-4 col-md-4"  ng-repeat="task in tasks">
             <div class="form-group">
+                <div class="boxed">
             <h4>Current Tasks</h4>
             {{task.msg}} 
-            </div>
-            <button class="btn-primary" ng-click="editTask(task)">Edit task</button>
-            <button class="btn-danger" ng-click="complete(task)">Complete task</button>
-            <button class="btn btn-danger" ng-click="removeTask(remove)">Remove task</button>
+                
+                </div>
+            
+            <button class="btn-primary btn-large" ng-click="editTask(task)">Edit task</button>
+            
+            <button class="btn-success btn-large" aria-hidden="true" ng-click="complete(task)">Complete task</button>
+            
+            <button class="btn btn-danger btn-sm" ng-click="removeTask(remove)">Remove task</button>
             
         </div>
     </div>
-</div>
-
-
-
-
-
-
-
 
 
 
 
 </div>
+
+
+
+
+
+
+
+
 </div>
+    <footer class="page-footer">
+        <div class="container">
+            &copy; Anders Friis 2016
+        </div>
+    </footer>
+
+
+</div>
+
 </body>
 </html>

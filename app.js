@@ -8,6 +8,7 @@ function mainController($scope) {
     $scope.tasks = [];
     $scope.newTask = {done: false};
     $scope.mytext = 'changed'
+    $scope.order = '-time';
 
     
 
@@ -37,7 +38,7 @@ function mainController($scope) {
     $scope.complete = function(task) {
        task.done = true;  
     }
-
+    
 
 
 
