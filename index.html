@@ -60,7 +60,8 @@
             <div class="form-group">
                 <div class="boxed">
             <h4>Current Tasks</h4>
-            {{task.msg}} 
+                    <div ng-class="{'completed-task':task.done}" > 
+                    {{task.msg}} 
                 
                 </div>
             
@@ -69,9 +70,10 @@
             <button class="btn-success btn-large" aria-hidden="true" ng-click="complete(task)">Complete task</button>
             
             <button class="btn btn-danger btn-sm" ng-click="removeTask(remove)">Remove task</button>
-            
+                
+                    </div>
+            </div>
         </div>
-    </div>
 
 
 

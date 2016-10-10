@@ -22,10 +22,10 @@ body{
     background-color: lightblue;
 }
 
-.task.done {
+.completed-task {
     text-decoration: line-through;
     text-align: center;
-    background-color: black;
+    
 }
 
 .boxed {

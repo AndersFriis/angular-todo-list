@@ -13,7 +13,7 @@ function mainController($scope) {
     
 
 
-
+        
         
     //add task
     $scope.addTask = function(task) {
@@ -38,7 +38,7 @@ function mainController($scope) {
     $scope.complete = function(task) {
        task.done = true;  
     }
-    
+
 
 
 
