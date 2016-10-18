@@ -17,6 +17,7 @@ function mainController($scope) {
         
     //add task
     $scope.addTask = function(task) {
+        task.time = Date.now()
         $scope.tasks.push(task);
         //clear input
         $scope.newTask = {}
@@ -39,15 +40,7 @@ function mainController($scope) {
        task.done = true;  
     }
 
-    //sort by date
-    $scope.datesort = function(date){
-        if (scope.datesort === date) {
-            scope.datesort = '-'+date; 
-        }
-        else {
-            scope.datesort = date;
-        }
-    }
+    
 
     
 
