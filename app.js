@@ -8,12 +8,12 @@ function mainController($scope) {
     $scope.tasks = [];
     $scope.newTask = {done: false};
     $scope.mytext = 'changed'
-    $scope.order = '-time';
+    $scope.datesort = '-time';
 
     
 
 
-        
+
         
     //add task
     $scope.addTask = function(task) {
@@ -39,7 +39,17 @@ function mainController($scope) {
        task.done = true;  
     }
 
+    //sort by date
+    $scope.datesort = function(date){
+        if (scope.datesort === date) {
+            scope.datesort = '-'+date; 
+        }
+        else {
+            scope.datesort = date;
+        }
+    }
 
+    
 
 
 };
